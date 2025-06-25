@@ -1,0 +1,155 @@
+body {
+    background-color: #084F55;
+}
+
+.navbar-custom {
+    background-color: #FFF4D1;
+}
+
+.navbar-brand img {
+    width: 80px;
+    height: auto;
+}
+
+.navbar-custom .container {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.nav-link {
+    color: #004d40;
+    font-weight: bold;
+    margin-left: 6px;
+}
+
+.nav-link:hover {
+    color: #00796b;
+}
+
+/* header {
+   color: #004d40;
+   
+   font-weight: bold;
+   margin-left: 6px;
+   background-color: #FFF5D7;
+   padding: 10px 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+   height: 75px;
+
+} */
+
+
+/* .carousel-inner {
+   display: flex;
+   overflow: hidden;
+   width: 100%;
+   height: 20rem;
+   position: relative;
+} 
+
+.carousel-inner {
+   align-items:center;
+   min-width: 100%;
+   transition: transform 1s ease;
+   object-fit: cover;
+}  */
+.imagemFundo {
+    background-image: url();
+    /* Substitua pela sua imagem */
+    background-size: cover;
+    /* cobre toda a largura */
+    background-position: center;
+    /* centraliza a imagem */
+    background-repeat: no-repeat;
+    /* não repete a imagem */
+
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /* cor do texto (opcional) */
+    text-align: center;
+}
+
+#textoImagem{
+   font-size: 67px;
+   font-weight: 800;
+   text-shadow: #636363 5px 5px 10px;
+   font-family: "Libertinus Math", system-ui;
+   font-weight: 400;
+   font-style: inherit;
+}
+
+
+
+
+
+/* footer */
+
+.footer-top {
+    background-color: #FFF4D1;
+    padding: 30px 40px;
+    position: relative;
+}
+
+.footer-bottom {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    height: 70px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 20px;
+    color: white;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.icon-instagram {
+    background-color: #E1306C;
+}
+
+.icon-facebook {
+    background-color: #3b5998;
+}
+
+.icon-whatsapp {
+    background-color: #25D366;
+}
+
+.back-to-top {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.back-to-top:hover {
+    background-color: #333;
+}
