@@ -80,7 +80,7 @@ header img {
 }
 
 #textoImagem{
-   font-size: 67px;
+   font-size: 4em;
    font-weight: 800;
    text-shadow: #636363 5px 5px 10px;
    font-family: "Libertinus Math", system-ui;
@@ -88,7 +88,66 @@ header img {
    font-style: inherit;
 }
 
+/* textos  */
+.container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 10px;
+  height: 40rem;
+  
+}
+  
+.div1Eficaz {
+  color: white;
+  grid-column: span 4 / span 4;
+  grid-row: span 3 / span 3;
+  
+  text-align: center;
+}
 
+
+/* ⬇ Imagem ⬇ */
+
+.div2Eficaz {
+  grid-column: span 2 / span 2;
+  grid-row: span 3 / span 3;
+  grid-column-start: 5;
+  align-self: end;
+}
+
+.CriançasLivros{
+  height: 23rem;
+  width: auto;
+  margin-left: 5rem;
+}
+
+
+
+/* ⬆ Imagem ⬆ */
+
+
+.div3 {
+  grid-column: span 2 / span 2;
+  grid-row: span 3 / span 3;
+  grid-row-start: 4;
+}
+
+.GarotoLendo{
+  height: 18rem;
+  width: auto;
+}
+
+.div4 {
+  color: white;
+  grid-column: span 4 / span 4;
+  grid-row: span 3 / span 3;
+  grid-column-start: 3;
+  grid-row-start: 4;
+}
+
+
+      
 
 
 
@@ -214,4 +273,55 @@ header img {
     text-align: center;
     padding: 10px 0;
     font-size: 14px;
+  }
+
+  @media(max-width: 375px){
+    .div1Eficaz {
+      color: white;
+      text-align: center;
+      font-size: 30px;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      gap: 10px;
+      height: 60rem;
+      
+    }
+    .CriançasLivros{
+      height: 30rem;
+      width: auto;
+      margin-left: 0rem;
+    }
+    
+    .div4 {
+      color: white;
+      grid-column: span 4 / span 4;
+      grid-row: span 3 / span 3;
+      grid-column-start: 3;
+      grid-row-start: 4;
+      font-size: 30px;
+    }
+
+    .GarotoLendo{
+      height: 18rem;
+      width: auto;
+    }
+
+    .div3 {
+      grid-column: span 2 / span 2;
+      grid-row: span 3 / span 3;
+      grid-row-start: 4;
+    }
+
+    .footer-top {
+      background-color: #FFF4D1;
+      padding: 20px 20px;
+      position: relative;
+      display: grid;
+      grid-template-columns: 2;
+      grid-template-rows: repeat(2, 1fr);
+      justify-content: center;
+    }
   }
