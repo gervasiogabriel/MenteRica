@@ -57,6 +57,7 @@ body {
 /* textos  */
 .container {
   display: grid;
+  background-color: #FFF5D7;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 1fr);
   gap: 10px;
@@ -68,7 +69,6 @@ body {
   color: white;
   grid-column: span 4 / span 4;
   grid-row: span 3 / span 3;
-  
   text-align: center;
 }
 
@@ -87,7 +87,7 @@ body {
 }
 /* ⬆ Imagem ⬆ */
 
-.div3 {
+.div3Aprenda {
   grid-column: span 2 / span 2;
   grid-row: span 3 / span 3;
   grid-row-start: 4;
@@ -98,14 +98,78 @@ body {
   width: auto;
 }
 
-.div4 {
-  color: white;
+.div4Aprenda {
+  color: rgb(0, 0, 0);
   grid-column: span 4 / span 4;
   grid-row: span 3 / span 3;
   grid-column-start: 3;
   grid-row-start: 4;
+  text-align: center;
 }
 
+.modulos-section {  
+  background-color: #084F55;
+  padding: 60px 20px;
+  margin: 40px 0;
+}
+
+.container-modulos {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  align-items: stretch;
+}
+
+.modulo {
+  background-color: #FFF5D7;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.modulo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.modulo-imagem {
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.modulo-imagem img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.modulo-conteudo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.modulo-conteudo h3 {
+  color: #084F55;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-family: "Libertinus Math", system-ui;
+}
+
+.modulo-conteudo p {
+  color: #333;
+  line-height: 1.6;
+  font-size: 1rem;
+  flex: 1;
+}
 /* footer */
 
 .footer {
@@ -139,7 +203,7 @@ body {
   }
 
   /* Logo footer */
-#logo-footer{
+  #logo-footer{
     height: 200px;
     width: 200px;
 }
@@ -238,9 +302,11 @@ body {
   }
     
     .div1Eficaz {
-      color: white;
-      text-align: center;
-      font-size: 30px;
+        display: grid;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        font-size: 30px;
+        align-content: space-evenly;
     }
     .container {
       display: grid;
@@ -252,10 +318,17 @@ body {
     }
 
     .footer-column {
-      flex: 1;
       min-width: 220px;
       margin-bottom: 20px;
       font-size: 22px;
+      }
+
+      .footer-column li{
+        font-size: 24px
+      }
+
+      .column2{
+        font-size: 24px;
       }
 
       .footer-column h3 {
@@ -272,8 +345,16 @@ body {
       margin-left: 0rem;
     }
     
-    .div4 {
-      color: white;
+    .div3Aprenda {
+        display: grid;
+        grid-column: span 2 / span 2;
+        grid-row: span 3 / span 3;
+        grid-row-start: 4;
+        align-items: center;
+    }
+
+    .div4Aprenda {
+      color: rgb(0, 0, 0);
       grid-column: span 4 / span 4;
       grid-row: span 3 / span 3;
       grid-column-start: 3;
@@ -282,14 +363,10 @@ body {
     }
 
     .GarotoLendo{
-      height: 18rem;
-      width: auto;
-    }
-
-    .div3 {
-      grid-column: span 2 / span 2;
-      grid-row: span 3 / span 3;
-      grid-row-start: 4;
+        display: grid;
+        height: 18rem;
+        width: auto;
+        justify-items: center;
     }
 
     .navbar-nav{
@@ -304,4 +381,5 @@ body {
   .textosTitulo{
     font-size: 40px;
   }
+
   }
