@@ -66,7 +66,33 @@
     color: #ffffff;
   }
   
-  .form-login button {
+  .btn-principal {
+    display: inline-block; /* Permite aplicar padding e outras propriedades de bloco */
+    padding: 12px 30px; /* Espaçamento interno (vertical e horizontal) */
+    
+    background-color: #084F55; /* Cor de fundo que você pediu */
+    color: #FFFFFF; /* Cor do texto (branco) */
+    
+    font-size: 1rem; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    text-align: center; /* Centraliza o texto (útil se a largura for fixa) */
+    text-decoration: none; /* Remove o sublinhado padrão do link */
+    
+    border: none; /* Remove qualquer borda */
+    border-radius: 25px; /* Deixa as bordas bem arredondadas */
+    
+    cursor: pointer; /* Mostra o ícone de "mãozinha" ao passar o mouse */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efeito de transição suave */
+  }
+  
+  /* Efeito ao passar o mouse por cima */
+  .btn-principal:hover {
+    background-color: #063c41; /* Um tom um pouco mais escuro de verde */
+    transform: translateY(-2px); /* Move o botão levemente para cima */
+  }
+
+  
+  /* .form-login button {
     padding: 8px 16px;
     border: none;
     border-radius: 8px;
@@ -76,7 +102,7 @@
     font-size: 0.9rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
+  } */
   
   .form-login button:hover {
     background-color: #7ea8a8;
