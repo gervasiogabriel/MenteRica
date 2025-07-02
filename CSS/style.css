@@ -455,7 +455,7 @@ body {
     .div1Eficaz {
         display: grid;
         text-align: center;
-        font-size: 2rem;
+        font-size: 9rem;
         align-content: space-evenly;
     }
     .container-info {
