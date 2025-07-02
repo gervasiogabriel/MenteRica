@@ -23,8 +23,6 @@ body {
 
 }
 
-
-
 .nav-link:hover {
     color: #00796b;
 }
@@ -225,6 +223,74 @@ body {
   font-size: 1rem;
   flex: 1;
 }
+
+/* --- SEÇÃO DE NOTÍCIAS --- */
+
+
+.secao-noticias {
+  width: 100%;
+  padding: 50px 5%; /* Espaçamento nas laterais e em cima/baixo */
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.secao-noticias h2 {
+  font-size: 2.5rem; /* Tamanho do título da seção */
+  margin-bottom: 40px;
+  color: #333; /* Cor do título da seção */
+}
+
+.container-noticias {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Espaço entre os cards */
+  flex-wrap: wrap; /* Permite que os cards quebrem a linha em telas menores */
+}
+
+.card-noticia {
+  width: 350px; /* Largura do card */
+  height: 250px; /* Altura do card */
+  border-radius: 15px; /* Bordas arredondadas */
+  overflow: hidden; /* Garante que a imagem não saia das bordas arredondadas */
+  position: relative; /* Necessário para o posicionamento do título */
+  display: block;
+  text-decoration: none; /* Remove o sublinhado do link */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+  transition: transform 0.3s ease; /* Efeito de transição ao passar o mouse */
+}
+
+.card-noticia:hover {
+  transform: scale(1.05); /* Aumenta o card levemente ao passar o mouse */
+}
+
+.card-noticia img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz a imagem cobrir todo o espaço do card sem distorcer */
+}
+
+.card-noticia .titulo-noticia {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 20px 20px 20px; /* Espaçamento interno (mais em cima para o degradê) */
+  box-sizing: border-box;
+  color: #154646; /* Cor do texto do título, similar ao verde da sua imagem */
+  
+  /* O degradê que você pediu */
+  background: linear-gradient(to top, #FFF5D7 70%, transparent 30%);
+}
+
+.card-noticia .titulo-noticia h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+
+
+
+
 /* footer */
 
 .footer {
@@ -326,13 +392,13 @@ body {
     right: 20px;
     background-color: #000;
     color: #fff;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     text-align: center;
-    line-height: 40px;
+    line-height: 60px;
     border-radius: 50%;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 28px;
   }
   
   .back-to-top:hover {
@@ -348,7 +414,7 @@ body {
     font-size: 14px;
   }
 
-  @media(max-width: 390px){
+  @media(max-width: 414px){
     .nav-link {
       color: #004d40;
       font-weight: bold;
@@ -456,6 +522,7 @@ body {
 
     .navbar-nav{
       align-items: flex-end;
+      font-size: 25px;
     }
 
     .navbar-brand img {
@@ -476,14 +543,15 @@ body {
 
   .modulo1, .modulo2, .modulo3{
     width: 600px;
+    
+  }
+  
+  .modulo-conteudo p{
+    font-size: 23px;
   }
 
-
-  .modulo2{
-    grid-row: 2 / 3;
+  .modulo-conteudo h3{
+    font-size: 28px;
   }
 
-  .modulo3{
-    grid-row: 3/4;
-  }
   }
