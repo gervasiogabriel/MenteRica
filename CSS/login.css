@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto Mono', monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #F2E9C9;
+  }
+  
+  .metade {
+    flex: 1 1 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 40px;
+  }
+  
+  .esquerda {
+    background-color: #c59929;
+    border-top-right-radius: 50px;
+  }
+  
+  .direita {
+    background-color: #F2E9C9;
+    color: #000;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+  }
+  
+  h3 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .form-login {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 450px;
+  }
+  
+  .form-login input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    background-color: #2F4F4F;
+    color: #ecf3f3;
+  }
+  
+  .form-login input::placeholder {
+    color: #ffffff;
+  }
+  
+  .form-login button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2F4F4F;
+    color: #fffefe;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-login button:hover {
+    background-color: #7ea8a8;
+    color: #000;
+  }
+  
+  .btn {
+    padding: 12px 24px;
+    background-color: #2F4F4F;
+    color: #f4fafa;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .btn:hover {
+    background-color: #7ea8a8;
+    color: #000;
+  }
+  
+  .back-to-top {
+    position: fixed;
+    left: 20px;
+    top: 15px;
+    background-color: #2F4F4F;
+    color: #fff;
+    width: 60px;
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 999;
+  }
+  
+  .back-to-top:hover {
+    background-color: #508080;
+    color: #000;
+  }
+  
+  .back-to-top i {
+    font-size: 20px;
+  }
+  
+  @media (max-width: 900px) {
+    body {
+      flex-direction: column;
+    }
+  
+    .metade {
+      flex: 1 1 100%;
+      border-radius: 0;
+    }
+  
+    .esquerda {
+      border-top-right-radius: 0;
+    }
+  
+    .direita {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  
+    h2 {
+      font-size: 2rem;
+    }
+  
+    .form-login {
+      width: 90%;
+    }
+  }
+  
