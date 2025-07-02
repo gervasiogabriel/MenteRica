@@ -23,53 +23,106 @@ body {
 
 }
 
+
+
 .nav-link:hover {
     color: #00796b;
 }
 
-.imagemFundo {
-    background-image: url(/IMG/);
-    /* Substitua pela sua imagem */
+/* .imagemFundo {
+    background-image: url(/IMG/WallpaperFinanceiro.jpeg);
     background-size: cover;
-    /* cobre toda a largura */
     background-position: center;
-    /* centraliza a imagem */
     background-repeat: no-repeat;
-    /* não repete a imagem */
     width: 100%;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 500px;
+    display: grid;
     color: white;
     text-align: center;
 }
 
 #textoImagem{
-   font-size: 4em;
+   font-size: 2em;
    font-weight: 800;
    text-shadow: #636363 5px 5px 10px;
-   font-family: "Libertinus Math", system-ui;
    font-weight: 400;
    font-style: inherit;
+   padding-top: 2rem;
+   padding-right: 38rem;
+} */
+
+/* Seção com imagem de fundo */
+.hero {
+  background-image: url(/IMG/WallpaperFinanceiro.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  height: 700px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  color: white;
+}
+
+/* Conteúdo da esquerda */
+.hero-content {
+  max-width: 600px;
+}
+
+/* Botões */
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.btn-claro {
+  background-color: #FFF4D1;
+  color: #000;
+  border: none;
+  padding: 12px 24px;
+  margin-right: 10px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-claro-outline {
+  background-color: transparent;
+  color: #FFF4D1;
+  border: 2px solid #FFF4D1;
+  padding: 10px 22px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-claro:hover,
+.btn-claro-outline:hover {
+  opacity: 0.9;
 }
 
 /* textos  */
-.container {
+.container-info {
   display: grid;
   background-color: #FFF5D7;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6,1fr);
   grid-template-rows: repeat(6, 1fr);
   gap: 10px;
-  height: 40rem;
+  height: 43rem;
   
 }
   
 .div1Eficaz {
-  color: white;
-  grid-column: span 4 / span 4;
-  grid-row: span 3 / span 3;
+  color: rgb(0, 0, 0);
+  display: grid;
+  grid-column: 1 / 5;
+  grid-row: 1 / 4;
   text-align: center;
+  align-content: space-evenly;
 }
 
 /* ⬇ Imagem ⬇ */
@@ -100,6 +153,7 @@ body {
 
 .div4Aprenda {
   color: rgb(0, 0, 0);
+  display: grid;
   grid-column: span 4 / span 4;
   grid-row: span 3 / span 3;
   grid-column-start: 3;
@@ -117,9 +171,10 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   align-items: stretch;
+  flex-wrap: wrap;
 }
 
 .modulo {
@@ -293,14 +348,44 @@ body {
     font-size: 14px;
   }
 
-  @media(max-width: 375px){
+  @media(max-width: 390px){
     .nav-link {
       color: #004d40;
       font-weight: bold;
       margin-left: 6px;
 
   }
-    
+  .hero {
+    background-image: url(/IMG/WallpaperFinanceiro.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 500px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    color: white;
+  }
+
+  .hero-content {
+    max-width: 400px;
+  }
+
+  .hero-buttons {
+    margin-top: 20px;
+  }
+  
+  .btn-claro-outline {
+    font-size: 22px;
+  }
+
+  .btn-claro {
+    font-size: 21px;
+  }
+
     .div1Eficaz {
         display: grid;
         color: rgb(0, 0, 0);
@@ -308,7 +393,7 @@ body {
         font-size: 30px;
         align-content: space-evenly;
     }
-    .container {
+    .container-info {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       grid-template-rows: repeat(6, 1fr);
@@ -382,4 +467,23 @@ body {
     font-size: 40px;
   }
 
+  .container-modulos {  
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, 400px);
+    justify-content: center;
+  }
+
+  .modulo1, .modulo2, .modulo3{
+    width: 600px;
+  }
+
+
+  .modulo2{
+    grid-row: 2 / 3;
+  }
+
+  .modulo3{
+    grid-row: 3/4;
+  }
   }
