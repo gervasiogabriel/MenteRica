@@ -436,7 +436,7 @@ body {
     color: white;
   }
 
-  .hero-content {
+  #hero-text{
     max-width: 400px;
   }
 
