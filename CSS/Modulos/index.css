@@ -6,7 +6,7 @@ body{
 /* Hero Section */
 .hero {
     position: relative;
-    background-image: url("../images/Edu1.avif"); /* Corrigido o caminho */
+    background-image: url("/IMG/Edu1.avif"); /* Corrigido o caminho */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
