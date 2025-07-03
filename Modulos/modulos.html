@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educação Financeira - Aprenda a Gerenciar suas Finanças</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/modulos/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+              <div class="hero-text">
+                <h1>Transforme sua Relação com o Dinheiro</h1>
+                <p>Aprenda educação financeira de forma prática e interativa através de vídeo aulas, simulações e jogos educativos.</p>
+                <div class="hero-buttons">
+                  <button class="btn btn-secondary">
+                    <i class="fas fa-info-circle"></i>
+                    Saiba Mais
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+        
+
+        <section id="modules" class="modules">
+            <div class="container">
+                <h2 class="section-title">Nossos Módulos de Aprendizagem</h2>
+                <p class="section-subtitle">Escolha a forma que mais se adapta ao seu estilo de aprendizado</p>
+                
+                <div class="modules-grid">
+                    <div class="module-card" data-module="video-aulas">
+                        <div class="module-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <img src="images/video-aulas.jpg" alt="Vídeo Aulas" class="module-image">
+                        <div class="module-content">
+                            <h3>Vídeo Aulas</h3>
+                            <p class="primeirotxt">Aprenda com especialistas através de vídeo aulas didáticas e práticas sobre planejamento financeiro, investimentos e controle de gastos.</p>
+                            <ul class="module-features">
+                                <li><i class="fas fa-check"></i> 50+ vídeo aulas</li>
+                                <li><i class="fas fa-check"></i> Totalmente gratuito</li>
+                                <li><i class="fas fa-check"></i> Acesso vitalício</li>
+                            </ul>
+                            <button class="btn btn-module" onclick="goToPage('pages/video-aulas.html')">
+                                Acessar Vídeo Aulas
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="module-card" data-module="simulacoes">
+                        <div class="module-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <img src="images/Simulaçoes.jpeg" alt="Simulações" class="module-image">
+                        <div class="module-content">
+                            <h3>Simulações Financeiras</h3>
+                            <p>Pratique com simuladores interativos de investimentos, financiamentos e planejamento financeiro para tomar decisões mais assertivas.</p>
+                            <ul class="module-features">
+                                <li><i class="fas fa-check"></i> Simulador de investimentos</li>
+                                <li><i class="fas fa-check"></i> Calculadora de financiamentos</li>
+                                <li><i class="fas fa-check"></i> Planejador de aposentadoria</li>
+                            </ul>
+                            <button class="btn btn-module" onclick="goToPage('pages/simulacoes.html')">
+                                Usar Simuladores
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="module-card" data-module="gamificacao">
+                        <div class="module-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <img src="images/desafios.webp" alt="Gamificação" class="module-image">
+                        <div class="module-content">
+                            <h3>Desafios</h3>
+                            <p>Aprenda brincando com jogos educativos, desafios e conquistas que tornam o aprendizado financeiro mais divertido e eficaz.</p>
+                            <ul class="module-features">
+                                <li><i class="fas fa-check"></i> Jogos interativos</li>
+                                <li><i class="fas fa-check"></i> Sistema de pontuação</li>
+                                <li><i class="fas fa-check"></i> Desafios semanais</li>
+                            </ul>
+                            <button class="btn btn-module" onclick="goToPage('pages/gamificacao.html')">
+                                Jogar e Aprender
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">Por que Educação Financeira?</h2>
+                <div class="about-grid">
+                    <div class="about-item">
+                        <div class="about-icon">
+                            <i class="fas fa-piggy-bank"></i>
+                        </div>
+                        <h3>Controle Financeiro</h3>
+                        <p>Aprenda a organizar suas finanças pessoais e familiares de forma eficiente.</p>
+                    </div>
+                    <div class="about-item">
+                        <div class="about-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Investimentos Inteligentes</h3>
+                        <p>Descubra como fazer seu dinheiro trabalhar para você através de investimentos.</p>
+                    </div>
+                    <div class="about-item">
+                        <div class="about-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Segurança Financeira</h3>
+                        <p>Construa uma reserva de emergência e planeje seu futuro financeiro.</p>
+                    </div>
+                    <div class="about-item">
+                        <div class="about-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Educação Contínua</h3>
+                        <p>Mantenha-se atualizado com as melhores práticas do mercado financeiro.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
+

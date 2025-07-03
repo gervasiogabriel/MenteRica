@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulações Financeiras - Educação Financeira</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/simulacoes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    
+
+    <main>
+        <section class="hero-simulation">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="breadcrumb">
+                        <a href="../index.html"><i class="fas fa-home"></i> Início</a>
+                        <span><i class="fas fa-chevron-right"></i></span>
+                        <span>Simulações</span>
+                    </div>
+                    <h1><i class="fas fa-calculator"></i> Simulações Financeiras</h1>
+                    <p>Pratique suas decisões financeiras com simuladores interativos</p>
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Simulador de Investimentos</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-home"></i>
+                            <span>Calculadora de Financiamentos</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Planejador de Aposentadoria</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="simulators-section">
+            <div class="container">
+                <div class="simulators-tabs">
+                    <button class="tab-button active" onclick="showSimulator('investment')">
+                        <i class="fas fa-chart-line"></i>
+                        Simulador de Investimentos
+                    </button>
+                    <button class="tab-button" onclick="showSimulator('financing')">
+                        <i class="fas fa-home"></i>
+                        Calculadora de Financiamentos
+                    </button>
+                    <button class="tab-button" onclick="showSimulator('retirement')">
+                        <i class="fas fa-piggy-bank"></i>
+                        Planejador de Aposentadoria
+                    </button>
+                </div>
+
+                <!-- Simulador de Investimentos -->
+                <div id="investment-simulator" class="simulator-content active">
+                    <div class="simulator-layout">
+                        <div class="simulator-form">
+                            <h3><i class="fas fa-chart-line"></i> Simulador de Investimentos</h3>
+                            <p>Calcule o crescimento dos seus investimentos ao longo do tempo</p>
+                            
+                            <div class="form-group">
+                                <label for="initialAmount">Valor Inicial (R$)</label>
+                                <input type="number" id="initialAmount" value="1000" min="0" step="100">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="monthlyContribution">Aporte Mensal (R$)</label>
+                                <input type="number" id="monthlyContribution" value="500" min="0" step="50">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="annualReturn">Rentabilidade Anual (%)</label>
+                                <input type="number" id="annualReturn" value="10" min="0" max="50" step="0.5">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="investmentPeriod">Período (anos)</label>
+                                <input type="number" id="investmentPeriod" value="10" min="1" max="50">
+                            </div>
+                            
+                            <button class="btn btn-primary" onclick="calculateInvestment()">
+                                <i class="fas fa-calculator"></i>
+                                Calcular Investimento
+                            </button>
+                        </div>
+                        
+                        <div class="simulator-results">
+                            <div class="result-card">
+                                <h4>Resultados da Simulação</h4>
+                                <div class="result-item">
+                                    <span class="result-label">Valor Final:</span>
+                                    <span class="result-value" id="finalAmount">R$ 0,00</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">Total Investido:</span>
+                                    <span class="result-value" id="totalInvested">R$ 0,00</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">Rendimento:</span>
+                                    <span class="result-value" id="totalReturn">R$ 0,00</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">Rentabilidade Total:</span>
+                                    <span class="result-value" id="totalPercentage">0%</span>
+                                </div>
+                            </div>
+                            
+                            <div class="chart-container">
+                                <canvas id="investmentChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calculadora de Financiamentos -->
+                <div id="financing-simulator" class="simulator-content">
+                    <div class="simulator-layout">
+                        <div class="simulator-form">
+                            <h3><i class="fas fa-home"></i> Calculadora de Financiamentos</h3>
+                            <p>Calcule as parcelas e o custo total do seu financiamento</p>
+                            
+                            <div class="form-group">
+                                <label for="propertyValue">Valor do Imóvel (R$)</label>
+                                <input type="number" id="propertyValue" value="300000" min="0" step="1000">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="downPayment">Entrada (R$)</label>
+                                <input type="number" id="downPayment" value="60000" min="0" step="1000">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="interestRate">Taxa de Juros Anual (%)</label>
+                                <input type="number" id="interestRate" value="8.5" min="0" max="30" step="0.1">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="financingPeriod">Prazo (anos)</label>
+                                <input type="number" id="financingPeriod" value="30" min="1" max="35">
+                            </div>
+                            
+                            <button class="btn btn-primary" onclick="calculateFinancing()">
+                                <i class="fas fa-calculator"></i>
+                                Calcular Financiamento
+                            </button>
+                        </div>
+                        
+                        <div class="simulator-results">
+                            <div class="result-card">
+                                <h4>Resultados do Financiamento</h4>
+                                <div class="result-item">
+                                    <span class="result-label">Valor Financiado:</span>
+                                    <span class="result-value" id="financedAmount">R$ 0,00</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">Parcela Mensal:</span>
+                                    <span class="result-value" id="monthlyPayment">R$ 0,00</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">Total a Pagar:</span>
+                                    <span class="result-value" id="totalPayment">R$ 0,00</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">Total de Juros:</span>
+                                    <span class="result-value" id="totalInterest">R$ 0,00</span>
+                                </div>
+                            </div>
+                            
+                            <div class="chart-container">
+                                <canvas id="financingChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Planejador de Aposentadoria -->
+                <div id="retirement-simulator" class="simulator-content">
+                    <div class="simulator-layout">
+                        <div class="simulator-form">
+                            <h3><i class="fas fa-piggy-bank"></i> Planejador de Aposentadoria</h3>
+                            <p>Planeje sua aposentadoria e descubra quanto precisa poupar</p>
+                            
+                            <div class="form-group">
+                                <label for="currentAge">Idade Atual</label>
+                                <input type="number" id="currentAge" value="30" min="18" max="65">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="retirementAge">Idade para Aposentadoria</label>
+                                <input type="number" id="retirementAge" value="65" min="50" max="80">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="currentSavings">Valor Atual Poupado (R$)</label>
+                                <input type="number" id="currentSavings" value="50000" min="0" step="1000">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="desiredIncome">Renda Mensal Desejada (R$)</label>
+                                <input type="number" id="desiredIncome" value="5000" min="0" step="100">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="retirementReturn">Rentabilidade na Aposentadoria (%)</label>
+                                <input type="number" id="retirementReturn" value="6" min="0" max="15" step="0.5">
+                            </div>
+                            
+                            <button class="btn btn-primary" onclick="calculateRetirement()">
+                                <i class="fas fa-calculator"></i>
+                                Calcular Aposentadoria
+                            </button>
+                        </div>
+                        
+                        <div class="simulator-results">
+                            <div class="result-card">
+                                <h4>Planejamento da Aposentadoria</h4>
+                                <div class="result-item">
+                                    <span class="result-label">Tempo para Aposentadoria:</span>
+                                    <span class="result-value" id="yearsToRetirement">0 anos</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">Valor Necessário:</span>
+                                    <span class="result-value" id="requiredAmount">R$ 0,00</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">Ainda Precisa Poupar:</span>
+                                    <span class="result-value" id="stillNeed">R$ 0,00</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">Poupança Mensal Necessária:</span>
+                                    <span class="result-value" id="monthlySavings">R$ 0,00</span>
+                                </div>
+                            </div>
+                            
+                            <div class="chart-container">
+                                <canvas id="retirementChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tips-section">
+            <div class="container">
+                <h2 class="section-title">Dicas para Suas Simulações</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Seja Realista</h3>
+                        <p>Use valores e taxas realistas baseadas no mercado atual para obter simulações mais precisas.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Considere a Inflação</h3>
+                        <p>Lembre-se de que a inflação afeta o poder de compra do seu dinheiro ao longo do tempo.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3>Diversifique</h3>
+                        <p>Não coloque todos os ovos na mesma cesta. Diversifique seus investimentos para reduzir riscos.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h3>Revise Regularmente</h3>
+                        <p>Faça simulações periodicamente para ajustar sua estratégia conforme sua situação muda.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/simulacoes.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeo Aulas - Educação Financeira</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/video-aulas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  
+    <main>
+        <section class="hero-video">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="breadcrumb">
+                        <a href="../index.html"><i class="fas fa-home"></i> Início</a>
+                        <span><i class="fas fa-chevron-right"></i></span>
+                        <span>Vídeo Aulas</span>
+                    </div>
+                    <h1><i class="fas fa-play-circle"></i> Vídeo Aulas de Educação Financeira</h1>
+                    <p>Aprenda com especialistas através de conteúdo audiovisual de alta qualidade</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">25+</span>
+                            <span class="stat-label">Vídeo Aulas</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">20h</span>
+                            <span class="stat-label">de Conteúdo</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Módulos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-player-section">
+            <div class="container">
+                <div class="video-layout">
+                    <div class="video-main">
+                        <div class="video-player">
+                            <div class="video-placeholder" id="videoPlayer">
+                                <i class="fas fa-play-circle"></i>
+                                <p>Selecione uma aula para começar</p>
+                            </div>
+                            <div class="video-controls" id="videoControls" style="display: none;">
+                                <div class="video-info">
+                                    <h3 id="videoTitle">Título da Aula</h3>
+                                    <p id="videoDescription">Descrição da aula</p>
+                                </div>
+                                <div class="video-actions">
+                                    <button class="btn btn-primary" id="markComplete">
+                                        <i class="fas fa-check"></i>
+                                        Marcar como Concluída
+                                    </button>
+                                    <button class="btn btn-secondary" id="addNotes">
+                                        <i class="fas fa-sticky-note"></i>
+                                        Adicionar Anotações
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="video-sidebar">
+                        <div class="progress-overview">
+                            <h3>Seu Progresso</h3>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="overallProgress" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text" id="progressText">0% concluído</span>
+                        </div>
+                        
+                        <div class="video-modules">
+                            <div class="module" data-module="1">
+                                <div class="module-header" onclick="toggleModule(1)">
+                                    <h4><i class="fas fa-book"></i> Módulo 1: Fundamentos</h4>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="module-content">
+                                    <div class="video-item" data-video="1-1" onclick="playVideo('1-1')">
+                                        <div class="video-thumbnail">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <div class="video-details">
+                                            <h5>Introdução à Educação Financeira</h5>
+                                            <span class="video-duration">15:30</span>
+                                        </div>
+                                        <div class="video-status">
+                                            <i class="fas fa-circle"></i>
+                                        </div>
+                                    </div>
+                                    <div class="video-item" data-video="1-2" onclick="playVideo('1-2')">
+                                        <div class="video-thumbnail">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <div class="video-details">
+                                            <h5>Conceitos Básicos de Finanças</h5>
+                                            <span class="video-duration">18:45</span>
+                                        </div>
+                                        <div class="video-status">
+                                            <i class="fas fa-circle"></i>
+                                        </div>
+                                    </div>
+                                    <div class="video-item" data-video="1-3" onclick="playVideo('1-3')">
+                                        <div class="video-thumbnail">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <div class="video-details">
+                                            <h5>Importância do Planejamento</h5>
+                                            <span class="video-duration">12:20</span>
+                                        </div>
+                                        <div class="video-status">
+                                            <i class="fas fa-circle"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="module" data-module="2">
+                                <div class="module-header" onclick="toggleModule(2)">
+                                    <h4><i class="fas fa-wallet"></i> Módulo 2: Orçamento Pessoal</h4>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="module-content">
+                                    <div class="video-item" data-video="2-1" onclick="playVideo('2-1')">
+                                        <div class="video-thumbnail">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <div class="video-details">
+                                            <h5>Como Fazer um Orçamento</h5>
+                                            <span class="video-duration">22:15</span>
+                                        </div>
+                                        <div class="video-status">
+                                            <i class="fas fa-circle"></i>
+                                        </div>
+                                    </div>
+                                    <div class="video-item" data-video="2-2" onclick="playVideo('2-2')">
+                                        <div class="video-thumbnail">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <div class="video-details">
+                                            <h5>Controle de Gastos</h5>
+                                            <span class="video-duration">19:30</span>
+                                        </div>
+                                        <div class="video-status">
+                                            <i class="fas fa-circle"></i>
+                                        </div>
+                                    </div>
+                                    <div class="video-item" data-video="2-3" onclick="playVideo('2-3')">
+                                        <div class="video-thumbnail">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <div class="video-details">
+                                            <h5>Eliminando Dívidas</h5>
+                                            <span class="video-duration">25:10</span>
+                                        </div>
+                                        <div class="video-status">
+                                            <i class="fas fa-circle"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="module" data-module="3">
+                                <div class="module-header" onclick="toggleModule(3)">
+                                    <h4><i class="fas fa-piggy-bank"></i> Módulo 3: Poupança e Reserva</h4>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="module-content">
+                                    <div class="video-item" data-video="3-1" onclick="playVideo('3-1')">
+                                        <div class="video-thumbnail">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <div class="video-details">
+                                            <h5>Reserva de Emergência</h5>
+                                            <span class="video-duration">20:45</span>
+                                        </div>
+                                        <div class="video-status">
+                                            <i class="fas fa-circle"></i>
+                                        </div>
+                                    </div>
+                                    <div class="video-item" data-video="3-2" onclick="playVideo('3-2')">
+                                        <div class="video-thumbnail">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <div class="video-details">
+                                            <h5>Estratégias de Poupança</h5>
+                                            <span class="video-duration">17:25</span>
+                                        </div>
+                                        <div class="video-status">
+                                            <i class="fas fa-circle"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="module" data-module="4">
+                                <div class="module-header" onclick="toggleModule(4)">
+                                    <h4><i class="fas fa-chart-line"></i> Módulo 4: Investimentos</h4>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="module-content">
+                                    <div class="video-item" data-video="4-1" onclick="playVideo('4-1')">
+                                        <div class="video-thumbnail">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <div class="video-details">
+                                            <h5>Primeiros Passos nos Investimentos</h5>
+                                            <span class="video-duration">28:15</span>
+                                        </div>
+                                        <div class="video-status">
+                                            <i class="fas fa-circle"></i>
+                                        </div>
+                                    </div>
+                                    <div class="video-item" data-video="4-2" onclick="playVideo('4-2')">
+                                        <div class="video-thumbnail">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <div class="video-details">
+                                            <h5>Renda Fixa vs Renda Variável</h5>
+                                            <span class="video-duration">24:30</span>
+                                        </div>
+                                        <div class="video-status">
+                                            <i class="fas fa-circle"></i>
+                                        </div>
+                                    </div>
+                                    <div class="video-item" data-video="4-3" onclick="playVideo('4-3')">
+                                        <div class="video-thumbnail">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <div class="video-details">
+                                            <h5>Diversificação de Carteira</h5>
+                                            <span class="video-duration">21:45</span>
+                                        </div>
+                                        <div class="video-status">
+                                            <i class="fas fa-circle"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="module" data-module="5">
+                                <div class="module-header" onclick="toggleModule(5)">
+                                    <h4><i class="fas fa-calendar-alt"></i> Módulo 5: Planejamento Futuro</h4>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="module-content">
+                                    <div class="video-item" data-video="5-1" onclick="playVideo('5-1')">
+                                        <div class="video-thumbnail">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <div class="video-details">
+                                            <h5>Planejamento para Aposentadoria</h5>
+                                            <span class="video-duration">26:40</span>
+                                        </div>
+                                        <div class="video-status">
+                                            <i class="fas fa-circle"></i>
+                                        </div>
+                                    </div>
+                                    <div class="video-item" data-video="5-2" onclick="playVideo('5-2')">
+                                        <div class="video-thumbnail">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <div class="video-details">
+                                            <h5>Seguros e Proteção</h5>
+                                            <span class="video-duration">18:55</span>
+                                        </div>
+                                        <div class="video-status">
+                                            <i class="fas fa-circle"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="notes-section" id="notesSection" style="display: none;">
+            <div class="container">
+                <div class="notes-container">
+                    <h3><i class="fas fa-sticky-note"></i> Suas Anotações</h3>
+                    <div class="notes-input">
+                        <textarea id="notesTextarea" placeholder="Digite suas anotações sobre esta aula..."></textarea>
+                        <div class="notes-actions">
+                            <button class="btn btn-primary" onclick="saveNotes()">
+                                <i class="fas fa-save"></i>
+                                Salvar Anotações
+                            </button>
+                            <button class="btn btn-secondary" onclick="closeNotes()">
+                                Fechar
+                            </button>
+                        </div>
+                    </div>
+                    <div class="saved-notes" id="savedNotes"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <script src="../js/common.js"></script>
+    <script src="../js/video-aulas.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamificação - Educação Financeira</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/gamificacao.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+   
+    <main>
+        <section class="hero-game">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="breadcrumb">
+                        <a href="../index.html"><i class="fas fa-home"></i> Início</a>
+                        <span><i class="fas fa-chevron-right"></i></span>
+                        <span>Gamificação</span>
+                    </div>
+                    <h1><i class="fas fa-gamepad"></i> Aprenda Brincando</h1>
+                    <p>Torne o aprendizado financeiro mais divertido com jogos e desafios</p>
+                    
+                    <div class="user-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-value" id="userLevel">1</span>
+                                <span class="stat-label">Nível</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-value" id="userPoints">0</span>
+                                <span class="stat-label">Pontos</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-value" id="userBadges">0</span>
+                                <span class="stat-label">Conquistas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="progress-section">
+            <div class="container">
+                <div class="progress-card">
+                    <h3>Seu Progresso</h3>
+                    <div class="level-progress">
+                        <div class="level-info">
+                            <span>Nível <span id="currentLevel">1</span></span>
+                            <span><span id="currentXP">0</span> / <span id="nextLevelXP">100</span> XP</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="xpProgress" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="games-section">
+            <div class="container">
+                <h2 class="section-title">Jogos Educativos</h2>
+                <div class="games-grid">
+                    <div class="game-card" data-game="quiz">
+                        <div class="game-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <div class="game-content">
+                            <h3>Quiz Financeiro</h3>
+                            <p>Teste seus conhecimentos com perguntas sobre educação financeira</p>
+                            <div class="game-stats">
+                                <span><i class="fas fa-clock"></i> 5-10 min</span>
+                                <span><i class="fas fa-star"></i> +20 XP</span>
+                            </div>
+                            <button class="btn btn-primary" onclick="startGame('quiz')">
+                                <i class="fas fa-play"></i>
+                                Jogar Quiz
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="game-card" data-game="budget">
+                        <div class="game-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <div class="game-content">
+                            <h3>Desafio do Orçamento</h3>
+                            <p>Gerencie um orçamento virtual e tome decisões financeiras inteligentes</p>
+                            <div class="game-stats">
+                                <span><i class="fas fa-clock"></i> 10-15 min</span>
+                                <span><i class="fas fa-star"></i> +50 XP</span>
+                            </div>
+                            <button class="btn btn-primary" onclick="startGame('budget')">
+                                <i class="fas fa-play"></i>
+                                Iniciar Desafio
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="game-card" data-game="investment">
+                        <div class="game-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="game-content">
+                            <h3>Simulador de Investimentos</h3>
+                            <p>Invista virtualmente e veja como suas decisões afetam seus resultados</p>
+                            <div class="game-stats">
+                                <span><i class="fas fa-clock"></i> 15-20 min</span>
+                                <span><i class="fas fa-star"></i> +75 XP</span>
+                            </div>
+                            <button class="btn btn-primary" onclick="startGame('investment')">
+                                <i class="fas fa-play"></i>
+                                Começar a Investir
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="game-card" data-game="savings">
+                        <div class="game-icon">
+                            <i class="fas fa-piggy-bank"></i>
+                        </div>
+                        <div class="game-content">
+                            <h3>Corrida da Poupança</h3>
+                            <p>Compete para ver quem consegue poupar mais em diferentes cenários</p>
+                            <div class="game-stats">
+                                <span><i class="fas fa-clock"></i> 8-12 min</span>
+                                <span><i class="fas fa-star"></i> +30 XP</span>
+                            </div>
+                            <button class="btn btn-primary" onclick="startGame('savings')">
+                                <i class="fas fa-play"></i>
+                                Começar Corrida
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="achievements-section">
+            <div class="container">
+                <h2 class="section-title">Conquistas</h2>
+                <div class="achievements-grid" id="achievementsGrid">
+                    <!-- Conquistas serão carregadas dinamicamente -->
+                </div>
+            </div>
+        </section>
+
+        <section class="leaderboard-section">
+            <div class="container">
+                <h2 class="section-title">Ranking</h2>
+                <div class="leaderboard-card">
+                    <div class="leaderboard-header">
+                        <h3><i class="fas fa-trophy"></i> Top 10 Jogadores</h3>
+                        <div class="leaderboard-tabs">
+                            <button class="tab-btn active" onclick="showLeaderboard('weekly')">Semanal</button>
+                            <button class="tab-btn" onclick="showLeaderboard('monthly')">Mensal</button>
+                            <button class="tab-btn" onclick="showLeaderboard('alltime')">Geral</button>
+                        </div>
+                    </div>
+                    <div class="leaderboard-list" id="leaderboardList">
+                        <!-- Ranking será carregado dinamicamente -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal do Jogo -->
+        <div id="gameModal" class="game-modal">
+            <div class="game-modal-content">
+                <div class="game-modal-header">
+                    <h3 id="gameTitle">Jogo</h3>
+                    <button class="close-btn" onclick="closeGame()">&times;</button>
+                </div>
+                <div class="game-modal-body" id="gameContent">
+                    <!-- Conteúdo do jogo será carregado aqui -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Conquista -->
+        <div id="achievementModal" class="achievement-modal">
+            <div class="achievement-modal-content">
+                <div class="achievement-celebration">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Parabéns!</h3>
+                    <p id="achievementText">Você desbloqueou uma nova conquista!</p>
+                    <button class="btn btn-primary" onclick="closeAchievementModal()">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/gamificacao.js"></script>
+</body>
+</html>
+
