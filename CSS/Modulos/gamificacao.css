@@ -1,5 +1,8 @@
 /* Estilos específicos para a página de gamificação */
-
+body{
+    font-family: "Roboto Serif", serif;
+    font-optical-sizing: auto;
+}
 /* Hero Section */
 .hero-game {
     background: #F2E9C9;

@@ -1,5 +1,8 @@
 /* Estilos específicos para a página de vídeo aulas */
-
+body{
+    font-family: "Roboto Serif", serif;
+    font-optical-sizing: auto;
+}
 /* Hero Section */
 .hero-video {
     background: #F2E9C9;

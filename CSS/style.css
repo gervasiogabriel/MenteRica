@@ -1,5 +1,7 @@
 body {
     background-color: #084F55;
+    font-family: "Roboto Serif", serif;
+    font-optical-sizing: auto;
 }
 
 .navbar-custom {

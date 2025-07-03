@@ -5,7 +5,8 @@
   }
   
   body {
-    font-family: 'Roboto Mono', monospace;
+    font-family: "Roboto Serif", serif;
+    font-optical-sizing: auto;
     min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
