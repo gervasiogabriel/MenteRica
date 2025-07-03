@@ -2,6 +2,7 @@
 body{
     font-family: "Roboto Serif", serif;
     font-optical-sizing: auto;
+    
 }
 /* Hero Section */
 .hero {
@@ -224,7 +225,126 @@ body{
     color: var(--text-secondary);
     line-height: 1.6;
 }
+.footer {
+    font-family: Arial, sans-serif;
+   
+  }
+  
+  /* Parte superior do footer */
+  .footer-top {
+    background-color: #FFF4D1;
+    padding: 20px 20px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 20% 40% 40%;
+    justify-content: end;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  /* Colunas */
+  .footer-column {
+    flex: 1;
+    min-width: 220px;
+    margin-bottom: 20px;
+  }
 
+  /* Logo footer */
+  #logo-footer{
+    height: 200px;
+    width: 200px;
+}
+
+  .column2{
+    justify-self: center;
+  }
+  
+  .footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #003366;
+    display: inline-block;
+    padding-bottom: 4px;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-column li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-column a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .footer-column p {
+    margin: 8px 0;
+    color: #000;
+  }
+  
+  /* Ícones sociais */
+  .social-icons i {
+    font-size: 24px;
+    color: #000;
+    margin-right: 12px;
+    transition: color 0.3s;
+  }
+  
+  .social-icons i:hover {
+    color: #555;
+  }
+  
+  .icon-circle {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  
+  /* Botão voltar ao topo */
+  .back-to-top {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #000;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 28px;
+  }
+  
+  .back-to-top:hover {
+    background-color: #333;
+  }
+  
+  /* Rodapé inferior */
+  .footer-bottom {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+  }
 /* Responsividade para mobile */
 @media (max-width: 768px) {
     .hero {
