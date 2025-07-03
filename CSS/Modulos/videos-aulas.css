@@ -21,7 +21,7 @@ body{
 }
 
 .breadcrumb a {
-    color: white;
+    color: #213737;
     text-decoration: none;
     transition: var(--transition);
 }

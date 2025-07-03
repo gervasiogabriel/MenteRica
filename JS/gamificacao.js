@@ -350,7 +350,7 @@ class QuizGame {
                 <h3>Quiz Finalizado!</h3>
                 <div class="result-stats">
                     <div class="stat-item">
-                        <span class="stat-label">Pontuação Final:</span>
+                        <span class="stat-label"</span>
                         <span class="stat-value">${this.score}</span>
                     </div>
                     <div class="stat-item">
@@ -589,6 +589,10 @@ gameStyles.textContent = `
         text-align: center;
     }
     
+    .stat-label{
+    color: yellow;
+    }
+
     .quiz-header {
         display: flex;
         justify-content: space-between;
@@ -702,6 +706,7 @@ gameStyles.textContent = `
     
     .result-stats {
         background: var(--bg-secondary);
+        color: white;
         padding: 2rem;
         border-radius: var(--border-radius);
         margin: 2rem 0;

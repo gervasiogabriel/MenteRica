@@ -356,7 +356,7 @@ body{
 .leaderboard-header h3 {
     font-size: 1.3rem;
     font-weight: 600;
-    color: var(--text-primary);
+    color: #c59929;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -496,7 +496,7 @@ body{
 .game-modal-header h3 {
     font-size: 1.3rem;
     font-weight: 600;
-    color: var(--text-primary);
+    color: #c59929;;
 }
 
 .close-btn {
