@@ -4,6 +4,31 @@ body{
     font-optical-sizing: auto;
     
 }
+.navbar-custom {
+    background-color: #FFF4D1;
+}
+
+.navbar-brand img {
+    width: 80px;
+    height: auto;
+}
+
+.navbar-custom .container {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.nav-link {
+    color: #004d40;
+    font-weight: bold;
+    margin-left: 6px;
+
+}
+
+.nav-link:hover {
+    color: #00796b;
+}
+
 /* Hero Section */
 .hero {
     position: relative;
