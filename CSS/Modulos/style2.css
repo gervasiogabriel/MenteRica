@@ -27,8 +27,8 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
+    font-family: "Roboto Serif", serif;
+    font-optical-sizing: auto;
     color: var(--text-primary);
     background-color: var(--bg-secondary);
 }
@@ -83,10 +83,11 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: var(--text-primary);
-    font-weight: 500;
     transition: var(--transition);
     position: relative;
+    color: #004d40;
+    font-weight: bold;
+    margin-left: 6px;
 }
 
 .nav-link:hover {
